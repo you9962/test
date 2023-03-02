@@ -1,0 +1,14 @@
+
+body{
+    border-style: double;
+}
+
+h2 {
+
+    text-align: center;
+    background-color: antiquewhite; 
+}
+h3 { 
+    background-color:wheat ;
+    border-style: outset;
+}

@@ -1,0 +1,33 @@
+.square {
+    width: 200px;
+    height: 200px;
+
+    position: absolute;
+    color: white;
+    padding: 10px;
+}
+
+.yello {
+    background: rgb(255, 242, 0);
+    top: 150px;
+    left: 109px;
+    z-index: 2;
+}
+
+.blue {
+    background: blue;
+    top: 135px;
+    left: 90px;
+    z-index: 1;
+}
+
+.red {
+    background: rgb(255, 25, 0);
+    top: 120px;
+    left: 75px;
+    z-index: 1;
+}
+
+#target {
+    margin: 20px 100px;
+}
