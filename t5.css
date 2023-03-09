@@ -1,14 +1,23 @@
+body {
+    border-style: solid;
 
-body{
-    border-style: double;
+    border-radius: 15px;
 }
 
-h2 {
-
+p.a {
     text-align: center;
-    background-color: antiquewhite; 
+    font-size: large;
 }
-h3 { 
-    background-color:wheat ;
-    border-style: outset;
+
+p.b {
+    text-align: left;
+}
+
+button {
+
+    color: whitesmoke;
+    background-color: red;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
