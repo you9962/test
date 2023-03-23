@@ -1,0 +1,33 @@
+label.error {
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+  }
+  input.error,
+  select.error {
+    border: 1px solid red;
+  }
+
+body {
+    border-style: solid;
+
+    border-radius: 15px;
+}
+
+p.a {
+    text-align: center;
+    font-size: large;
+}
+
+p.b {
+    text-align: left;
+}
+
+button {
+
+    color: whitesmoke;
+    background-color: red;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}

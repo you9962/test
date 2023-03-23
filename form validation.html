@@ -1,0 +1,131 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/t5.js"></script>
+    <link rel="stylesheet" href="form.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+</head>
+
+<body>
+    <form id="myForm">
+        <p class="a"> Application for permission to date my dauther </p>
+        <p class="b"> <span style="font-weight: bold;"> Note </span> : form is to be completed at least 21 days prior
+            date
+        </p>
+        <fieldset>
+            <legend> personal details </legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+
+            <label for="gender">Gender:</label> <br>
+
+            <input type="radio" id="gender-male" name="gender" value="male" required>
+            <label for="gender-male">Male</label><br>
+            <input type="radio" id="gender-female" name="gender" value="female" required>
+            <label for="gender-female">Female</label><br>
+
+            <label for="start">Date of proposed outing</label>
+
+            <input type="date" id="start" name="trip-start" value="1999-11-7" min="1900-01-01" max="2200-12-31"><br>
+        </fieldset>
+
+        <fieldset>
+            <h3>Check All that Apply</h3>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I have tattoos and/or piercings</label><br>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I am more than 2 yaers older than my dauther</label><br>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I own a panelvan or v8 ute</label><br>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I work full-time</label><br>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">my parents are rich</label><br>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">IS the date at a well lit public location</label>
+
+        </fieldset>
+
+
+        <fieldset>
+            <label for="education">Education:</label>
+            <select id="education" name="education" required>
+                <option value="">Choose an option</option>
+                <option value="high-school">High School</option>
+                <option value="bachelors">Bachelor's Degree</option>
+                <option value="masters">Master's Degree</option>
+                <option value="phd">PhD</option>
+            </select><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Essay Section</legend>
+            <h5>in 50 words or explain why you want to date my dauther</h5>
+            <label for="answer1"></label>
+            <textarea id="text" id="answer1" name="answer1" required></textarea><br>
+            <h5>pleas upload contact details for 2 refernces </h5>
+            <label for="answer2"></label>
+            <textarea type="text" id="answer2" name="answer2" required></textarea> <br>
+            <h5> upload police clearance certificate,bank statement and medical certificates here
+                <input type="file" id="myFile" name="filename">
+
+            </h5>
+        </fieldset>
+        <button type="submit" id="submit-btn">Submit</button>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $('#myForm').validate({
+                rules: {
+                    email: {
+                        
+                        required: true,
+                        email: true
+                    },
+                    name: {
+                        required: true,
+                        minlength: 2
+                    },
+                    phone: {
+                        required: true,
+                        phoneUS: true
+                    }
+                },
+                messages: {
+                    email: {
+                        required: "Please enter your email address",
+                        email: "Please enter a valid email address"
+                    },
+                    phone: {
+                        required: "Please enter your phone number",
+                        phoneUS: "Please enter a valid US phone number"
+                    }
+                }
+            });
+
+            $('#submit-btn').click(function () {
+                if ($('#myForm').valid()) {
+                    alert('Form submitted successfully!');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
